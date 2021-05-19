@@ -21,8 +21,10 @@ export default class Route {
             const controller = new Controller(req, res);
             if(typeof controller[action] !== "function") throw Error(`There is no action ${controllerName}.${action}`);
             const data = await controller[action]();
-            res.send(data);
-            res.end();
+            res.json({
+                code: res.statusCode,
+                data,
+            });
         })
         
         return this.router;
@@ -32,4 +34,5 @@ export default class Route {
         this.middlewares = middlewares;
         return this;
     }
+
 }
