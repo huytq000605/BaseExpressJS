@@ -1,6 +1,6 @@
 import express from 'express'
-// import Route from './Route/index.js';
-import Route from "../routes/index.js"
+// import Route from "@cores/Route"
+import Route from "@root/routes"
 
 export default class Server {
     port;

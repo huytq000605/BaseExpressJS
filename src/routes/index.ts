@@ -1,4 +1,4 @@
-import Route from '../lib/Route/index.js'
+import Route from '@cores/Route'
 Route.group(() => {
     Route.get('/students', 'StudentController.index');
     Route.post('/students', 'StudentController.create')

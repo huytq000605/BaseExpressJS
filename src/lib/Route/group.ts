@@ -1,5 +1,5 @@
 import express from "express";
-import Route from "./route.js";
+import Route from "./route";
 
 export default class Group {
     private _prefix: string;

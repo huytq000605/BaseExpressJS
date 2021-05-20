@@ -1,4 +1,4 @@
-import Group from "./group.js";
+import Group from "./group";
 
 const Route = new Group();
 
